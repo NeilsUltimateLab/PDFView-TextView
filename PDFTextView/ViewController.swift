@@ -7,21 +7,26 @@
 //
 
 import Cocoa
+import PDFKit
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var pdfView: PDFView!
+    @IBOutlet weak var textView: NSTextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.pdfView.acceptsDraggedFiles = true
+        observeNotifications()
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+    
+    private func observeNotifications() {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.PDFViewPageChanged, object: nil, queue: nil) { (notification) in
+            guard let pdfView = notification.object as? PDFView else { return }
+            if let attributedString = pdfView.currentPage?.attributedString {
+                self.textView.textStorage?.setAttributedString(attributedString)
+            }
         }
     }
 
-
 }
-

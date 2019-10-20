@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D229CEFF235CA9D3003CB598 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D229CEFE235CA9D3003CB598 /* PDFKit.framework */; };
 		D29CBF59235CA5F00093D8FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29CBF58235CA5F00093D8FC /* AppDelegate.swift */; };
 		D29CBF5B235CA5F00093D8FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29CBF5A235CA5F00093D8FC /* ViewController.swift */; };
 		D29CBF5D235CA5F20093D8FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29CBF5C235CA5F20093D8FC /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D229CEFE235CA9D3003CB598 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		D29CBF55235CA5F00093D8FC /* PDFTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29CBF58235CA5F00093D8FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D29CBF5A235CA5F00093D8FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,17 +30,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D229CEFF235CA9D3003CB598 /* PDFKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D229CEFD235CA9D2003CB598 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D229CEFE235CA9D3003CB598 /* PDFKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D29CBF4C235CA5F00093D8FC = {
 			isa = PBXGroup;
 			children = (
 				D29CBF57235CA5F00093D8FC /* PDFTextView */,
 				D29CBF56235CA5F00093D8FC /* Products */,
+				D229CEFD235CA9D2003CB598 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
